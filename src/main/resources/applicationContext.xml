@@ -7,12 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="musicPlayer.properties"></context:property-placeholder>
-    <bean id="classicalMusic" class="dmitry.spring.ClassicalMusic" scope="singleton">
+    <bean id="classicalMusic" class="dmitry.spring.core.withxml.ClassicalMusic" scope="singleton">
     </bean>
-    <bean id="rockMusic" class="dmitry.spring.RockMusic">
+    <bean id="rockMusic" class="dmitry.spring.core.withxml.RockMusic">
 
     </bean>
-    <bean id="musicPlayer" class="dmitry.spring.MusicPlayer" scope="prototype" init-method="doInit" destroy-method="doDestroy">
+    <bean id="musicPlayer" class="dmitry.spring.core.withxml.MusicPlayer" scope="prototype" init-method="doInit" destroy-method="doDestroy">
         <constructor-arg ref="rockMusic"></constructor-arg>
         <property name="name" value="someName"></property>
         <property name="volume" value="${volume}"></property>

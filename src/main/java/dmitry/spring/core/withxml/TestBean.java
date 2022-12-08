@@ -1,4 +1,4 @@
-package dmitry.spring;
+package dmitry.spring.core.withxml;
 
 public class TestBean {
     private String name;

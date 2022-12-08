@@ -1,5 +1,6 @@
 package dmitry.spring;
 
+import dmitry.spring.core.withxml.MusicPlayer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpring {

@@ -1,4 +1,4 @@
-package dmitry.spring;
+package dmitry.spring.core.withxml;
 
 import java.util.List;
 
