@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
+    <context:property-placeholder location="musicPlayer.properties"></context:property-placeholder>
     <bean id="classicalMusic" class="dmitry.spring.ClassicalMusic">
     </bean>
     <bean id="rockMusic" class="dmitry.spring.RockMusic">
@@ -14,5 +14,14 @@
     </bean>
     <bean id="musicPlayer" class="dmitry.spring.MusicPlayer">
         <constructor-arg ref="rockMusic"></constructor-arg>
+        <property name="name" value="someName"></property>
+        <property name="volume" value="${volume}"></property>
+        <property name="listMusic">
+            <list>
+                <value>First</value>
+                <value>Second</value>
+                <value>Third</value>
+            </list>
+        </property>
     </bean>
 </beans>
