@@ -12,7 +12,7 @@
     <bean id="rockMusic" class="dmitry.spring.RockMusic">
 
     </bean>
-    <bean id="musicPlayer" class="dmitry.spring.MusicPlayer" scope="prototype">
+    <bean id="musicPlayer" class="dmitry.spring.MusicPlayer" scope="prototype" init-method="doInit" destroy-method="doDestroy">
         <constructor-arg ref="rockMusic"></constructor-arg>
         <property name="name" value="someName"></property>
         <property name="volume" value="${volume}"></property>

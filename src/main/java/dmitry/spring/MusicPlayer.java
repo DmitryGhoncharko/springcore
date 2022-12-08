@@ -47,6 +47,12 @@ public class MusicPlayer {
     public void play(){
         System.out.println(music.getSong());
     }
+    public void doInit(){
+        System.out.println("init");
+    }
+    public void doDestroy(){
+        System.out.println("destroy");
+    }
     public void playListMusic(){
         for(String str : listMusic){
             System.out.println(str);
